@@ -34,12 +34,21 @@
             {
                 Console.Write("請輸入要計算費式數列的第幾項：");
 
+                
                 //使用者輸入
-                int n = Convert.ToInt32(Console.ReadLine());
+                try
+                {
+                    int n = Convert.ToInt32(Console.ReadLine());
 
-                long result = Fibonacci(n);
+                    long result = Fibonacci(n);
 
-                Console.WriteLine($"第 {n} 項費式數列為：{result}");
+                    Console.WriteLine($"第 {n} 項費式數列為：{result}");
+
+                }
+                catch
+                {
+                    Console.WriteLine("必須輸入數字");
+                }
 
 
                 //是否要再次執行
